@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    public static Dictionary<Vector2, Point> AllPoints = new Dictionary<Vector2,Point>();
+    
+    private void Awake(){
+        AllPoints.Clear();
+        StartCoroutine("wai");
+    }
+    IEnumerator wai(){
+        yield return new WaitForSeconds(0.01f);
+        Time.timeScale = 0;
+    }
+
+    
+    
+}
